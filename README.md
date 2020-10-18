@@ -1,24 +1,32 @@
 # pandas-challenge
 Homework week 4
+In this challenge, data pertaining to schools within a district were analyzed in a variety of scenarios.  
 
-Import pandas library and load schools_complete.csv and students_complete.csv
+##District Summary:
 
-Read files with pandas and use the merge function to combine into a single dataset
+This data set is a high-level overview of the district conveying the total number of schools and their students, the total district budget, and average test scores.  This data alone provides a baseline for the independent performance of the data to come
 
-Checked for any incomplete values using the count function and determined there were none.
+##School Summary:
 
-Use the nunique function on schools to find the total number of schools.
+This data provides the same basic statistics as the district summary by school. In this view the assumption begins to manifest that while Charter Schools are budgeted similarly on a per student basis, the percentages of students passing overall appears greater than those of the district schools.
 
-Use the count function on students assuming there may be some duplicate values where different students have the same name.
+##Top Performing Schools/Bottom Performing Schools:
 
-Create a dataframe with only the school name and budget to remove the variaton of the other columns and group by the min of budget since the number is repeated in every row.  
+The assumption that Charter Schools were out-performing the district schools become more apparent when viewing the top 5 and bottom 5 schools in the district when compared by percentage of students who passed both math and reading.  The top 5 are all Charter Schools and the bottom 5 are all District.  Total students range from 962-2,283 in Charter Schools while they range from 2,917-4,761 in the District Schools.
 
-Find the sum of each school's total budget.
+##Scores by Grade:
 
-Calculate the average scores for math and reading by using the mean function.
+When the scores by grade are viewed without regard to the school type, each school appears homogenous irrespective of grade.  On average, the students at each school do not improve from year to year, if not by negligible amounts.
 
-Use the loc function with a condition for scores of greater than equal to 70 in math reading and both.
+##Scores by Spending per Student
 
-Create a dictionary of the data and pass the summary totals through with titles for each data point.
+This view illuminates a stronger justification for the assumption that school spending does not equate to better test scores.  In fact, the least funded schools (under $584 per student) are passing %90.37 of the time.
 
-Create a dataframe using the dictionary.
+##Scores by School Size:
+
+This view also begins to illuminate another assumption:  The schools with over 2000 students are far lower in percentage of students Passing Overall at only %58.29 and also low in percentage of students Passing Math at %69.96.
+
+##Scores by School Type
+
+In the end, the assumption that Charter Schools have greater success than the District Schools in this district at %90.43 passing overall vs. %53.67 at District Schools.  This can be assumed to be the result of smaller student body sizes rather than a greater budget as supported by the Scores by Spending and Scores by Number of Students data sets.
+
